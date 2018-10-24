@@ -3,6 +3,8 @@ const app = express();
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 8080;
 
+const MONGOD_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'bookmarks';
+
 app.use(express.json());
 app.use(express.static('public'));
 
