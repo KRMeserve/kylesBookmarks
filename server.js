@@ -8,11 +8,11 @@ app.use(express.static('public'));
 const bookmarkController = require('./controllers/bookmarks.js');
 app.use('/bookmarks', bookmarkController);
 
-app.listen(3000, ()=>{
+app.listen(PORT || 3000, ()=>{
     console.log('listening...');
 });
 
-mongoose.connect('mongodb://localhost:27017/bookmark', {useNewUrlParser:true});
+mongoose.connect(MONGODB_URI, {useNewUrlParser:true});
 mongoose.connection.once('open', ()=>{
     console.log('connected to mongo');
 });
