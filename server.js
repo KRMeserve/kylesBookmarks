@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
-const MONGOD_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'bookmarks';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'bookmarks';
 
 app.use(express.json());
 app.use(express.static('public'));
